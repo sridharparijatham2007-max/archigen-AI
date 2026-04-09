@@ -1,0 +1,5 @@
+{
+  "name": "Archigen AI",
+  "description": "AI-powered architectural system for generating optimized building designs based on site conditions, regulations, and client requirements.",
+  "requestFramePermissions": []
+}

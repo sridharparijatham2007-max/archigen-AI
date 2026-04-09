@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-bg: #E4E3E0;
+  --color-ink: #141414;
+  --color-line: #141414;
+  --color-accent: #2563eb;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+}
+
+.blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(20, 20, 20, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 20, 20, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.technical-border {
+  border: 1px solid rgba(20, 20, 20, 0.2);
+}
+
+.technical-card {
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.technical-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1px solid rgba(20, 20, 20, 0.4);
+  border-left: 1px solid rgba(20, 20, 20, 0.4);
+}
+
+.technical-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.4);
+  border-right: 1px solid rgba(20, 20, 20, 0.4);
+}
+
